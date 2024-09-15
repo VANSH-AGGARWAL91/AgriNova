@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            const handleClick = (url) => {
+                window.location.href = url;
+            };
+
+            return (
+                <div className="flex flex-col items-center justify-center h-screen bg-white">
+                    <div className="text-5xl font-bold text-black text-left">
+                        <p>Do You</p>
+                        <p>have Our</p>
+                        <p>Sensors ,</p>
+                    </div>
+                    <div className="flex space-x-10 mt-10">
+                        <i 
+                            className="fas fa-check-circle text-7xl text-green-500 cursor-pointer" 
+                            onClick={() => handleClick('info2.html')}
+                        ></i>
+                        <i 
+                            className="fas fa-times-circle text-7xl text-red-500 cursor-pointer" 
+                            onClick={() => handleClick('info2.html')}
+                        ></i>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

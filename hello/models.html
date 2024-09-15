@@ -1,0 +1,27 @@
+<html></html>
+<head>
+    <title>Agri Helper's</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            return (
+                <div className="flex flex-col items-center justify-center h-screen bg-white">
+                    <h1 className="text-3xl font-bold mb-8">Agri Helper’s</h1>
+                    <button className="bg-green-500 text-black font-bold py-2 px-4 rounded-full mb-4 w-64 h-12">Argi Assistant</button>
+                    <button className="bg-green-500 text-black font-bold py-2 px-4 rounded-full mb-4 w-64 h-12">Pest Detection</button>
+                    <button className="bg-green-500 text-black font-bold py-2 px-4 rounded-full mb-4 w-64 h-12">Crop Price Prediction</button>
+                    <button className="bg-green-500 text-black font-bold py-2 px-4 rounded-full w-64 h-12">soon.........</button>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

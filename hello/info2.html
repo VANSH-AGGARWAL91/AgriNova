@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Form Page</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-white">
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            // Function to handle redirection
+            const handleRedirect = () => {
+                window.location.href = "dashboard.html"; // Replace with the actual next page URL
+            };
+
+            return (
+                <div className="flex flex-col items-center space-y-6">
+                    <input 
+                        type="text" 
+                        placeholder="Enter Field Area" 
+                        className="bg-gray-200 text-black font-bold py-2 px-4 rounded-full w-64 text-center"
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="Enter Current Crop" 
+                        className="bg-gray-200 text-black font-bold py-2 px-4 rounded-full w-64 text-center"
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="Enter Previous Crop" 
+                        className="bg-gray-200 text-black font-bold py-2 px-4 rounded-full w-64 text-center"
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="Enter Soil Type" 
+                        className="bg-gray-200 text-black font-bold py-2 px-4 rounded-full w-64 text-center"
+                    />
+                    <button 
+                        onClick={handleRedirect} 
+                        className="bg-white border border-gray-300 text-black font-bold py-2 px-4 rounded-full w-12 h-12 flex items-center justify-center"
+                    >
+                        <i className="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
